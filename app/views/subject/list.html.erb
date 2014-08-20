@@ -1,0 +1,8 @@
+
+<h1>Listing Subjects</h1>
+<ul id="subject_list">
+<% @subjects.each do |c| %>
+<li><%= link_to c.name, :action => 'show', :id => c.id %>
+<%= "(#{c.books.count})" -%></li>
+<% end %>
+</ul>
